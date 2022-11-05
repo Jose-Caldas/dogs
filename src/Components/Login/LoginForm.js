@@ -6,7 +6,8 @@ import Button from "../Forms/Button";
 import Input from "../Forms/Input";
 
 const LoginForm = () => {
-  const { userLogin } = useContext(UserContext);
+  const { userLogin, error, loading } = useContext(UserContext);
+  console.log({ error });
 
   const username = useForm();
   const password = useForm();
@@ -25,7 +26,13 @@ const LoginForm = () => {
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="email" name="userName" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
-        <Button onClick={handleSubmit}>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ) : (
+          <Button onClick={handleSubmit}>Entrar</Button>
+        )}
+
+        {error && <p>{error}</p>}
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
