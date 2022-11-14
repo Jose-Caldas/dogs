@@ -17,11 +17,13 @@ const LoginCreate = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     const { url, options } = USER_POST({
       username: username.value,
       email: email.value,
       password: password.value,
     });
+
     const { response } = await request(url, options);
     if (response.ok) userLogin(username.value, password.value);
   };
