@@ -36,6 +36,7 @@ export function USER_GET(token) {
     },
   };
 }
+
 export function USER_POST(body) {
   return {
     url: API_URL + "/api/user",
@@ -48,6 +49,7 @@ export function USER_POST(body) {
     },
   };
 }
+
 export function PHOTO_POST(formData, token) {
   return {
     url: API_URL + "/api/photo",
@@ -60,6 +62,7 @@ export function PHOTO_POST(formData, token) {
     },
   };
 }
+
 export function PHOTOS_GET({ page, total, user }) {
   return {
     url: `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
@@ -69,6 +72,7 @@ export function PHOTOS_GET({ page, total, user }) {
     },
   };
 }
+
 export function PHOTO_GET(id) {
   return {
     url: `${API_URL}/api/photo/${id}`,
@@ -78,6 +82,7 @@ export function PHOTO_GET(id) {
     },
   };
 }
+
 export function COMMENT_POST(id, body) {
   return {
     url: `${API_URL}/api/comment/${id}`,
