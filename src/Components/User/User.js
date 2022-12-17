@@ -5,7 +5,6 @@ import Feed from "../Feed/Feed";
 import NotFound from "../NotFound";
 import UserHeader from "./UserHeader";
 import UserPhotoPost from "./UserPhotoPost";
-import UserProfile from "./UserProfile";
 import UserStats from "./UserStats";
 
 const User = () => {
