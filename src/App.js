@@ -10,6 +10,7 @@ import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import Photo from "./Components/Photo/Photo";
 import UserProfile from "./Components/User/UserProfile";
 import NotFound from "./Components/NotFound";
+import LoginpasswordReset from "./Components/Login/LoginpasswordReset";
 
 function App() {
   return (
