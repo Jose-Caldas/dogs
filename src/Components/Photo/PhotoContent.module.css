@@ -67,12 +67,12 @@
 }
 
 .visualizacoes::before {
-  content: "";
+  content: '';
+  display: inline-block;
   width: 16px;
   height: 10px;
   margin-right: 0.5rem;
-  display: inline-block;
-  background: url("../../Assets/visualizacao-black.svg");
+  background: url('../../Assets/visualizacao-black.svg');
 }
 
 .attributes {
@@ -88,13 +88,13 @@
 }
 
 .attributes li::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 20px;
   margin-right: 0.5rem;
-  margin-top: 5px;
-  width: 2px;
   position: relative;
   top: 3px;
+  width: 2px;
   background: #333;
+  margin-top: 5px;
 }

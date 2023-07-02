@@ -12,10 +12,10 @@
   margin: auto;
   width: 80px;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding-left: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
