@@ -1,25 +1,25 @@
-import React from 'react';
-import Input from '../Forms/Input';
-import Button from '../Forms/Button';
-import useForm from '../../Hooks/useForm';
-import useFetch from '../../Hooks/useFetch';
-import { PASSWORD_LOST } from '../../Api';
-import Error from '../Helper/Error';
-import Head from '../Helper/Head';
+import React from 'react'
+import Input from '../Forms/Input'
+import Button from '../Forms/Button'
+import useForm from '../../Hooks/useForm'
+import useFetch from '../../Hooks/useFetch'
+import { PASSWORD_LOST } from '../../api/Api'
+import Error from '../Helper/Error'
+import Head from '../Helper/Head'
 
 const LoginPasswordLost = () => {
-  const login = useForm();
-  const { data, loading, error, request } = useFetch();
+  const login = useForm()
+  const { data, loading, error, request } = useFetch()
 
   async function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
     if (login.validate()) {
       const { url, options } = PASSWORD_LOST({
         login: login.value,
         url: window.location.href.replace('perdeu', 'resetar'),
-      });
-      const { json } = await request(url, options);
-      console.log(json);
+      })
+      const { json } = await request(url, options)
+      console.log(json)
     }
   }
 
@@ -42,7 +42,7 @@ const LoginPasswordLost = () => {
 
       <Error error={error} />
     </section>
-  );
-};
+  )
+}
 
-export default LoginPasswordLost;
+export default LoginPasswordLost

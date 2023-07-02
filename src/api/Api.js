@@ -1,4 +1,4 @@
-export const API_URL = 'https://dogsapi.origamid.dev/json';
+export const API_URL = 'https://dogsapi.origamid.dev/json'
 
 export function TOKEN_POST(body) {
   return {
@@ -10,7 +10,7 @@ export function TOKEN_POST(body) {
       },
       body: JSON.stringify(body),
     },
-  };
+  }
 }
 
 export function TOKEN_VALIDATE_POST(token) {
@@ -22,7 +22,7 @@ export function TOKEN_VALIDATE_POST(token) {
         Authorization: 'Bearer ' + token,
       },
     },
-  };
+  }
 }
 
 export function USER_GET(token) {
@@ -34,7 +34,7 @@ export function USER_GET(token) {
         Authorization: 'Bearer ' + token,
       },
     },
-  };
+  }
 }
 
 export function USER_POST(body) {
@@ -47,7 +47,7 @@ export function USER_POST(body) {
       },
       body: JSON.stringify(body),
     },
-  };
+  }
 }
 
 export function PHOTO_POST(formData, token) {
@@ -60,7 +60,7 @@ export function PHOTO_POST(formData, token) {
       },
       body: formData,
     },
-  };
+  }
 }
 
 export function PHOTOS_GET({ page, total, user }) {
@@ -70,7 +70,7 @@ export function PHOTOS_GET({ page, total, user }) {
       method: 'GET',
       cache: 'no-store',
     },
-  };
+  }
 }
 
 export function PHOTO_GET(id) {
@@ -80,7 +80,7 @@ export function PHOTO_GET(id) {
       method: 'GET',
       cache: 'no-store',
     },
-  };
+  }
 }
 
 export function COMMENT_POST(id, body) {
@@ -94,7 +94,7 @@ export function COMMENT_POST(id, body) {
       },
       body: JSON.stringify(body),
     },
-  };
+  }
 }
 
 export function PHOTO_DELETE(id) {
@@ -106,7 +106,7 @@ export function PHOTO_DELETE(id) {
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
     },
-  };
+  }
 }
 
 export function PASSWORD_LOST(body) {
@@ -119,7 +119,7 @@ export function PASSWORD_LOST(body) {
       },
       body: JSON.stringify(body),
     },
-  };
+  }
 }
 
 export function PASSWORD_RESET(body) {
@@ -132,7 +132,7 @@ export function PASSWORD_RESET(body) {
       },
       body: JSON.stringify(body),
     },
-  };
+  }
 }
 
 export function STATS_GET() {
@@ -144,5 +144,5 @@ export function STATS_GET() {
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
     },
-  };
+  }
 }

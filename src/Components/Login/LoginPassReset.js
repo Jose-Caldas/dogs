@@ -3,12 +3,12 @@ import Input from '../Forms/Input'
 import Button from '../Forms/Button'
 import useForm from '../../Hooks/useForm'
 import useFetch from '../../Hooks/useFetch'
-import { PASSWORD_RESET } from '../../Api'
+import { PASSWORD_RESET } from '../../api/Api'
 import Error from '../Helper/Error'
 import { useNavigate } from 'react-router-dom'
 import Head from '../Helper/Head'
 
-const LoginPasswordReset = () => {
+const LoginPassReset = () => {
   const [login, setLogin] = React.useState('')
   const [key, setKey] = React.useState('')
   const password = useForm()
@@ -58,4 +58,4 @@ const LoginPasswordReset = () => {
   )
 }
 
-export default LoginPasswordReset
+export default LoginPassReset
