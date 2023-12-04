@@ -1,14 +1,14 @@
-import React from 'react';
-import styles from './PhotoContent.module.css';
-import { Link } from 'react-router-dom';
-import PhotoComments from './PhotoComments';
-import { UserContext } from '../../UserContext';
-import PhotoDelete from './PhotoDelete';
-import Image from '../Helper/Image';
+import React from 'react'
+import styles from './PhotoContent.module.css'
+import { Link } from 'react-router-dom'
+import PhotoComments from './PhotoComments'
+import { UserContext } from '../../UserContext'
+import PhotoDelete from './PhotoDelete'
+import Image from '../Helper/Image'
 
 const PhotoContent = ({ data, single }) => {
-  const user = React.useContext(UserContext);
-  const { photo, comments } = data;
+  const user = React.useContext(UserContext)
+  const { photo, comments } = data
 
   return (
     <div className={`${styles.photo} ${single ? styles.single : ''}`}>
@@ -36,7 +36,7 @@ const PhotoContent = ({ data, single }) => {
       </div>
       <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
-  );
-};
+  )
+}
 
-export default PhotoContent;
+export default PhotoContent

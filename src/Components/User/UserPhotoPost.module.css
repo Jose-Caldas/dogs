@@ -9,10 +9,15 @@
   .photoPost {
     grid-template-columns: 1fr;
   }
+
+  .file {
+    font-size: 12px;
+  }
 }
 
 .file {
   margin-bottom: 1rem;
+  margin-top: 8px;
 }
 
 .preview {
