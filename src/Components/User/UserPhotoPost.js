@@ -49,7 +49,7 @@ const UserPhotoPost = () => {
         <Input label="Peso" type="number" name="peso" {...peso} />
         <Input label="Idade" type="number" name="idade" {...idade} />
         <div>
-          <label for="img">Foto</label>
+          <label htmlFor="img">Foto</label>
           <input
             className={styles.file}
             type="file"
@@ -61,7 +61,7 @@ const UserPhotoPost = () => {
         {loading ? (
           <Button disabled>Enviando...</Button>
         ) : (
-          <Button>Enviar</Button>
+          <Button title="Enviar">Enviar</Button>
         )}
         <Error error={error} />
       </form>
