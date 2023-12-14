@@ -7,8 +7,9 @@ import Image from '../Helper/Image'
 import { useSelector } from 'react-redux'
 
 const PhotoContent = ({ single }) => {
-  const { user } = useSelector((state) => state)
-  const { photo, comments } = useSelector((state) => state.photo.data)
+  const user = useSelector((state) => state.user)
+  const photo = useSelector((state) => state.photo.data.photo)
+  const comments = useSelector((state) => state.photo.data.comments)
 
   return (
     <div className={`${styles.photo} ${single ? styles.single : ''}`}>
