@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import FeedModal from './FeedModal'
 import FeedPhotos from './FeedPhotos'
 import PropTypes from 'prop-types'
@@ -8,21 +8,15 @@ import Loading from '../Helper/Loading'
 import Error from '../Helper/Error'
 
 const Feed = ({ user }) => {
-  const [modalPhoto, setModalPhoto] = React.useState(null)
-
-  const infinite = useSelector((state) => state.feed.infinite)
-  const loading = useSelector((state) => state.feed.loading)
-  const list = useSelector((state) => state.feed.list)
-  const error = useSelector((state) => state.feed.error)
-
+  const { infinite, loading, list, error } = useSelector((state) => state.feed)
   const dispatch = useDispatch()
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(resetFeedState())
     dispatch(loadNewPhotos({ user, total: 6 }))
   }, [dispatch, user])
 
-  useEffect(() => {
+  React.useEffect(() => {
     let wait = false
     function infiniteScroll() {
       if (infinite) {
@@ -48,11 +42,8 @@ const Feed = ({ user }) => {
 
   return (
     <div>
-      {modalPhoto && (
-        <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
-      )}
-
-      {list.length > 0 && <FeedPhotos setModalPhoto={setModalPhoto} />}
+      <FeedModal />
+      {list.length > 0 && <FeedPhotos />}
       {loading && <Loading />}
       {error && <Error error={error} />}
 
