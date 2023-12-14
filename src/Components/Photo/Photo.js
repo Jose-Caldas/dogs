@@ -5,7 +5,7 @@ import Loading from '../Helper/Loading'
 import PhotoContent from './PhotoContent'
 import Head from '../Helper/Head'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchPhoto } from '../../reducer/photo'
+import { fetchPhoto } from '../../redux/reducer/photo'
 
 const Photo = () => {
   const { id } = useParams()

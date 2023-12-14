@@ -4,7 +4,7 @@ import Error from '../Helper/Error'
 import Loading from '../Helper/Loading'
 import PhotoContent from '../Photo/PhotoContent'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchPhoto } from '../../reducer/photo'
+import { fetchPhoto } from '../../redux/reducer/photo'
 
 const FeedModal = ({ photo, setModalPhoto }) => {
   const { loading, error, data } = useSelector((state) => state.photo)
