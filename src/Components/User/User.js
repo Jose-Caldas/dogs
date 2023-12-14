@@ -9,8 +9,6 @@ import Head from '../Helper/Head'
 import { useSelector } from 'react-redux'
 
 const User = () => {
-  // const { data } = React.useContext(UserContext);
-
   const { data } = useSelector((state) => state.user)
 
   return (

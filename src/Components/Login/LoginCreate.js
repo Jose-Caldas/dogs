@@ -4,16 +4,18 @@ import Button from '../Forms/Button'
 import Error from '../Helper/Error'
 import useForm from '../../Hooks/useForm'
 import { USER_POST } from '../../api/Api'
-import { UserContext } from '../../UserContext'
 import useFetch from '../../Hooks/useFetch'
 import Head from '../Helper/Head'
+import { useDispatch } from 'react-redux'
+import { userLogin } from '../../redux/reducer/user'
 
 const LoginCreate = () => {
   const username = useForm()
   const email = useForm('email')
   const password = useForm()
 
-  const { userLogin } = React.useContext(UserContext)
+  const dispatch = useDispatch()
+
   const { loading, error, request } = useFetch()
 
   async function handleSubmit(event) {
@@ -24,7 +26,10 @@ const LoginCreate = () => {
       password: password.value,
     })
     const { response } = await request(url, options)
-    if (response.ok) userLogin(username.value, password.value)
+    if (response.ok)
+      dispatch(
+        userLogin({ username: username.value, password: password.value })
+      )
   }
 
   return (

@@ -17,9 +17,9 @@ const LoginForm = () => {
   const dispatch = useDispatch()
 
   const token = useSelector((state) => state.token)
-  console.log(token)
+
   const user = useSelector((state) => state.user)
-  console.log(user)
+
   const loading = token.loading || user.loading
   const error = token.error || user.error
 
